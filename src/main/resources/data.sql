@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS user;
+
+CREATE TABLE user (
+  document VARCHAR(250) PRIMARY KEY,
+  email VARCHAR(250) NOT NULL,
+  name VARCHAR(250) NOT NULL,
+  birth_date VARCHAR(250) NOT NULL
+);
