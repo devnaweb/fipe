@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity(name = "user")
 @Getter
@@ -27,4 +29,7 @@ public class User {
 
     @Column(name = "birth_date", nullable = false)
     private String birthDate;
+
+    @OneToMany(mappedBy = "document")
+    private List<Vehicle> vehicles;
 }

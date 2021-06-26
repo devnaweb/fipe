@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus;
 
 public class InvalidDataException extends BaseBusinessException {
 
-    public InvalidDataException() {
-        super(HttpStatus.BAD_REQUEST, "Document or email is invalid", false);
+    public InvalidDataException(final String message) {
+        super(HttpStatus.BAD_REQUEST, message, false);
     }
 }
