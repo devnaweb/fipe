@@ -27,13 +27,13 @@ public class CreateUser {
 
     private void validateUserDocument(final String document) {
         if (userRepository.findUserByDocument(document).isPresent()) {
-            throw new InvalidDataException();
+            throw new InvalidDataException("Document or email is invalid");
         }
     }
 
     private void validateUserEmail(final String email) {
         if (userRepository.findUserByEmail(email).isPresent()) {
-            throw new InvalidDataException();
+            throw new InvalidDataException("Document or email is invalid");
         }
     }
 }

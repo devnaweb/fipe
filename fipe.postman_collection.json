@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "6ef2612a-392e-46e3-b201-cfae288d89fa",
+		"name": "Fipe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"document\": \"81836673094\",\r\n    \"email\": \"helpsdan@devnaweb.com.br\",\r\n    \"name\": \"Dani Alves\",\r\n    \"birthDate\": \"11/11/1997\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/devnaweb/fipe/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"devnaweb",
+						"fipe",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"Honda\",\r\n    \"model\": \"PCX\",\r\n    \"year\": \"2015\",\r\n    \"type\": \"MOTORCYCLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/devnaweb/fipe/vehicle/81836673094",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"devnaweb",
+						"fipe",
+						"vehicle",
+						"81836673094"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Vehicles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/devnaweb/fipe/vehicle/81836673094",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"devnaweb",
+						"fipe",
+						"vehicle",
+						"81836673094"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
